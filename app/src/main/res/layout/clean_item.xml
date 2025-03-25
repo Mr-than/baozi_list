@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.baozi_list.ui.view.DeleteConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/clean_train_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="车号"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clean_lane_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="股道号"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clean_train_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clean_train_number"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/clean_remark_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:background="#EFEFEF"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clean_train_number" />
+
+
+    <LinearLayout
+        android:id="@+id/clean_item_delete"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:background="#f74c30"
+        android:orientation="horizontal"
+        android:tag="delete_button"
+        app:layout_constraintBottom_toBottomOf="@+id/task_fold_time"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="#00000000"
+            android:gravity="center|start"
+            android:tag="delete_button_text"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="1dp"
+        android:background="#E9E5E5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clean_remark_list" />
+
+
+</com.example.baozi_list.ui.view.DeleteConstraintLayout>

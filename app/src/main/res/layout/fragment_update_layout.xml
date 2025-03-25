@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginStart="32dp"
+        android:id="@+id/update_train"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="回库车次"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/update_train_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/update_train_edit"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/update_train"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_train"
+        app:layout_constraintTop_toTopOf="@+id/update_train" />
+
+    <TextView
+        android:layout_marginStart="32dp"
+        android:id="@+id/update_train_number"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="车号"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/update_train_in_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_train" />
+
+    <EditText
+        android:id="@+id/update_train_number_edit"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/update_train_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_train_number"
+        app:layout_constraintTop_toTopOf="@+id/update_train_number" />
+
+
+    <TextView
+        android:layout_marginStart="32dp"
+        android:id="@+id/update_train_in_time"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="入段线时间"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/update_train_out_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_train_number" />
+
+    <EditText
+        android:id="@+id/update_train_in_time_edit"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/update_train_in_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_train_in_time"
+        app:layout_constraintTop_toTopOf="@+id/update_train_in_time" />
+
+
+    <TextView
+        android:layout_marginStart="32dp"
+        android:id="@+id/update_train_out_time"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="出段线时间"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/update_train_lane"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_train_in_time" />
+
+    <EditText
+        android:id="@+id/update_train_out_time_edit"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/update_train_out_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_train_out_time"
+        app:layout_constraintTop_toTopOf="@+id/update_train_out_time" />
+
+    <TextView
+        android:layout_marginStart="32dp"
+        android:id="@+id/update_train_lane"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="股道"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/update_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_train_out_time" />
+
+    <EditText
+        android:id="@+id/update_train_lane_edit"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/update_train_lane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_train_lane"
+        app:layout_constraintTop_toTopOf="@+id/update_train_lane" />
+
+    <Button
+        android:layout_marginBottom="32dp"
+        android:id="@+id/update_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/update_firm"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:layout_marginBottom="32dp"
+        android:id="@+id/update_firm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/update_cancel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_test_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/top_m"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/top_v"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_m"
+             />
+
+        <View
+            android:id="@+id/top_v"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.baozi_list.ui.view.ScrollerDownView
+        android:id="@+id/activity_main_scroll_down_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/activity_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:transitionName="sharedImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/activity_main_search"
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:transitionName="shared">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/search" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="搜索" />
+                </LinearLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_main_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_main_toolbar" />
+
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="1000dp"
+                android:id="@+id/car_list"
+                app:cardBackgroundColor="#D7D2CD"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/fragment_list_fab"
+                app:layout_constraintStart_toStartOf="@+id/fragment_list_fab"
+                app:layout_constraintTop_toTopOf="@+id/fragment_list_fab">
+
+                <TextView
+                    android:id="@+id/car_list_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="车"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="1000dp"
+                android:id="@+id/disinfection_list"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="#D7D2CD"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/fragment_list_fab"
+                app:layout_constraintStart_toStartOf="@+id/fragment_list_fab"
+                app:layout_constraintTop_toTopOf="@+id/fragment_list_fab">
+
+                <TextView
+                    android:id="@+id/disinfection_list_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="消毒"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/cleaning_list"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                app:cardBackgroundColor="#D7D2CD"
+                app:cardCornerRadius="1000dp"
+                app:layout_constraintEnd_toEndOf="@+id/fragment_list_fab"
+                app:layout_constraintStart_toStartOf="@+id/fragment_list_fab"
+                app:layout_constraintTop_toTopOf="@+id/fragment_list_fab">
+                <TextView
+                    android:id="@+id/cleaning_list_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="清洁"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <com.example.baozi_list.ui.view.MoveFloatingActionButton
+                android:id="@+id/fragment_list_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginEnd="16sp"
+                android:layout_marginBottom="200dp"
+                android:backgroundTint="#D7D2CD"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:contextClickable="true"
+                android:focusable="true"
+                app:fabSize="auto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:shapeAppearance="@style/Widget.Design.FloatingActionButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/center_activity_main" />
+
+    </com.example.baozi_list.ui.view.ScrollerDownView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

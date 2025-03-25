@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:text="2024/8/30"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    android:id="@+id/time_textView"
+    android:gravity="center"
+    android:textSize="25sp"
+    android:background="#00EDEAEA"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
